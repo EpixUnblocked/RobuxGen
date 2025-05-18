@@ -153,3 +153,42 @@ footer {
     width: 90%;
   }
 }
+
+#navToggle {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #f0e6ff;
+}
+
+.nav-links.show {
+  display: flex !important;
+}
+
+.nav-links a.active {
+  background-color: #9d4edd;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  #navToggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #150020;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 10px;
+  }
+}

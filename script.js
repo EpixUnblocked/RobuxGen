@@ -1,3 +1,4 @@
+// script.js
 function startGenerator() {
   const username = document.getElementById("username").value;
   const amount = document.getElementById("amount").value;
@@ -39,3 +40,34 @@ function startGenerator() {
 function closeModal() {
   document.getElementById("statusModal").style.display = "none";
 }
+
+// Mobile Nav Toggle
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("navToggle");
+  const nav = document.querySelector(".nav-links");
+
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("show");
+  });
+
+  // Scroll spy
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".nav-links a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      if (pageYOffset >= sectionTop - 60) {
+        current = section.getAttribute("id");
+      }
+    });
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  });
+});
