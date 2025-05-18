@@ -1,4 +1,3 @@
-// script.js
 function startGenerator() {
   const username = document.getElementById("username").value;
   const amount = document.getElementById("amount").value;
@@ -27,7 +26,7 @@ function startGenerator() {
   let percent = 0;
   const interval = setInterval(() => {
     if (i < steps.length) {
-      log.innerText += '\\n' + steps[i];
+      log.innerText += '\n' + steps[i];
       percent += 25;
       progress.style.width = percent + "%";
       i++;
