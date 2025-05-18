@@ -1,3 +1,4 @@
+/* styles.css */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -69,6 +70,7 @@ button:hover {
   width: 90%;
   max-width: 500px;
   color: #adffef;
+  position: relative;
 }
 
 .close {
@@ -99,4 +101,15 @@ pre {
   white-space: pre-line;
   font-family: monospace;
   font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .hero .content {
+    padding: 0 20px;
+  }
+
+  input, select, button {
+    width: 90%;
+  }
 }
