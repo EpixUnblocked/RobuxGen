@@ -20,7 +20,7 @@ function startGenerator() {
     "Connecting to Roblox servers...",
     `Transferring ${amount} Robux...`,
     "Verifying transaction...",
-    "Error: User flagged as TOO RICH. Transfer blocked."
+    "Error: User flagged as bot. Transfer blocked."
   ];
 
   let i = 0;
